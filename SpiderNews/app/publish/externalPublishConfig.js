@@ -6,7 +6,6 @@
  * To change this template use File | Settings | File Templates.
  */
 
-var $ = require('jquery');
 var iconv = require('iconv-lite');
 var extpubConfig = {}
 
@@ -19,17 +18,17 @@ extpubConfig['pubnews'] = {
     resolve : function(originData){
         decodeData = iconv.decode(originData,'gb2312')
 
-        var $doc = $(decodeData);
+        var topnewsRegex = /<ul class="ulist "  >([\W\w]*?)<\/div>/;
+        var topnews = decodeData.match(topnewsRegex)[1];
 
-        var dataExt = $doc.find(".l-left-col").html();
         var resolved = {
-            topnews: dataExt
+            topnews: topnews
         }
 
         return resolved;
     },
 
-    fetchInterval : 60 * 1000,
+    fetchInterval : 6 * 1000,
 
     buffer : true
 

@@ -48,3 +48,10 @@ Demo介绍：演示如何使用Clouda的validation（验证）
 
 在线演示：<http://cloudavalidation.duapp.com>
 
+	
+## SpiderNews
+
+Demo介绍：演示如何使用Clouda抓取第三方数据
+
+在线演示：<http://cloudavalidation.duapp.com>
+
