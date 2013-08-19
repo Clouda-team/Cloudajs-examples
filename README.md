@@ -40,4 +40,11 @@ Demo介绍：Chatroom的升级版，演示如何在Clouda中调用第三方的SD
 * 修改app/controller/chatRoomController.js 第43/44行
 
 	填入client_id和redirect_uri
+	
+	
+## Validation
+
+Demo介绍：演示如何使用Clouda的validation（验证）
+
+在线演示：<http://cloudavalidation.duapp.com>
 
