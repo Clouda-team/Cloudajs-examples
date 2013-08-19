@@ -1,9 +1,9 @@
 /**
  * 
- * @author     ganxun(ganxun@baidu.com)
+ * @author     ganxun
  * @version    1.0 
  * @desc       在这个Controller中包含了两种登陆方法：1.使用百度帐号登陆
- * 											   2.无账号登陆
+ * 						     2.无账号登陆
  */
 
 sumeru.router.add(
