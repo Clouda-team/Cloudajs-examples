@@ -53,5 +53,9 @@ Demo介绍：演示如何使用Clouda的validation（验证）
 
 Demo介绍：演示如何使用Clouda抓取第三方数据
 
-在线演示：<http://cloudavalidation.duapp.com>
+在线演示：<http://cloudaspidernews.duapp.com/>
+注意：
+
+* 由于抓取的源文件编码格式是gb2312，所以使用第三发模块iconv-lite来转码。使用本demo前，将SpiderNews内的app和node_modules文件夹覆盖新建的工程内同名文件夹即可。
+
 
