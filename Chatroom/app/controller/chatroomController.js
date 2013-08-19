@@ -1,6 +1,6 @@
 /**
  *
- * @author     ganxun(ganxun@baidu.com)
+ * @author     ganxun
  * @version    1.0
  * @desc
  *
