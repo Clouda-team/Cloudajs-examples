@@ -35,7 +35,7 @@ Demo介绍：Chatroom的升级版，演示如何在Clouda中调用第三方的SD
 
 * 修改app/controller/login.js 第44/45行
 
-	填入client_id()和redirect_uri
+	填入client_id(BAE上的API Key)和redirect_uri
 
 * 修改app/controller/chatRoomController.js 第43/44行
 
