@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Clouda Chatroom</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	</head>
+	<body>
+		
+		<script>
+			
+			hash = window.location.hash;			
+			var	access_token;
+			
+	      	console.log("hash:"+hash);
+	      
+			if(hash){
+				access_token = hash.split('&')[1].split('=')[1];
+			}
+			
+			if(window.localStorage)
+	         {
+	         	window.localStorage.setItem("acess_token",access_token);			             	
+	         }
+	         
+	         window.location.href = "http://cloudachatroomv2.duapp.com/chatchannel"
+         
+         </script>
+	</body>
+</html>

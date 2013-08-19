@@ -1,0 +1,1 @@
+sumeru.config({httpServerPort:8080,sumeruPath:"/../sumeru"}),sumeru.router.add({pattern:"/itworks",action:"App.itworks"}),App.itworks=sumeru.controller.create(function(e,t){e.onrender=function(e){e("itworks",["push","left"])}});

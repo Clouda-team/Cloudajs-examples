@@ -1,0 +1,142 @@
+ #chatroom,#chatChannelMain
+{
+    overflow: hidden;
+    position:relative;
+    padding:0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4
+}
+
+
+section{
+	background-color: white;
+}
+
+ #toolbar
+{
+    position: absolute;
+    z-index: 2008;
+    top: 0px;
+    margin:0px;
+    width: 100%;
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    background: #8bbbf6;
+    text-align: center;
+    font-size: 15px;
+}
+
+#toolbar span{
+	height: 40px;
+	line-height: 40px;
+	font-size: 18px;
+}
+ 
+#messages
+{
+	position:absolute;
+	top:40px;
+	width: 100%;
+	overflow: auto;
+	bottom:40px;
+}
+
+.username{
+	margin:5px;
+	color: #3982ff;
+}
+
+.username span{
+	padding-left: 10px;
+	color: #3982ff;
+	font-size: 10px;
+}
+
+ 
+
+
+footer{
+	position: absolute;
+    z-index: 30000;
+    bottom: 0px;
+    width: 100%;
+    height: 40px;
+    background: #e5e5e5;
+    font-size: 14px;
+}
+
+footer #inputMessage
+{
+	float:left;
+    width: 60%;
+    height: 28px;
+  	padding-left: 5px;
+    margin-top: 4px;
+    border-radius:10px;
+    background: #fff;
+    font-size: 14px;
+    margin-left:10px;
+}
+
+footer #inputName
+{
+	
+    width: 20%;
+    height: 28px;
+  	padding-left: 5px;
+    margin-top: 4px;
+    border-radius:10px;
+    background: #fff;
+    font-size: 14px;
+    margin-left:10px;
+    float:left;
+}
+
+.content{
+  margin-left:20px;
+  font-size:14px;
+}
+#send{
+	position:relative;
+	z-index:300021;
+	margin-top:4px;
+	width: 70px;
+	height: 30px;
+	line-height: 0px;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	color: white;
+	border-radius: 3px;
+	border: 1px solid #4688D6;
+	background-color: #5e9ee9;
+	float:left;
+	margin-left:10px;
+}
+
+button{
+	width: 100%;
+	height: 42px;
+	line-height: 42px;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	color: white;
+	border-radius: 3px;
+	border: 1px solid #4688D6;
+	background-color: #4C93E7;
+}
+
+
+.createTime{
+	color:#ADACAC;
+	margin-top:3px;
+	margin-left:10px;
+	font-size:10px;
+}
+
+
+		

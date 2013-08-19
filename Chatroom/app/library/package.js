@@ -1,0 +1,3 @@
+sumeru.packages(
+	'getChatTime.js'
+);

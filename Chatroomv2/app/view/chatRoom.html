@@ -1,0 +1,30 @@
+<div id="chatroom">	
+	
+	<block tpl-id="chatroom_container">
+	<div id="toolbar">
+		<button id="roomBackTochannel">返回</button>
+		<span>{{$Library.getUsername.getUsername()}}</span>
+		<button id="logout">退出</button>						
+	</div>
+		
+	
+		<div id="messages">			
+			{{#each data}}
+				<div class="username">{{this.username}}<span class="time">{{$Library.getChatTime.getTime(this.time)}}</span></div>				
+				<div class="bubble">
+					<div class="content">
+						{{this.content}}
+					</div>
+				</div>		
+			{{/each}}			
+		</div>
+	</block>
+		
+	<footer>
+		<input id="inputMessage" placeholder="say something here!" />
+		<button id="send">发送</button>
+	</footer>	
+</div>
+	
+
+

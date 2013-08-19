@@ -1,0 +1,72 @@
+<block tpl-id="todos">
+	<div id="todoapp">
+       <header id="header">
+                <h1>Todos</h1>
+                <input id="new-todo" placeholder="What needs to be done?(100)" maxlength="100">
+       </header>
+   
+       <section id="main">
+	        <input id="toggle-all" type="checkbox" {{#if isAllChecked}} checked = "true" {{/if}}>
+	        <label for="toggle-all">Mark all as complete</label>
+	        <ul id="todo-list" class="data-cloak">
+	        		{{#each data}}
+	                 <li>
+                       <div class="view">
+                       		{{#if this.completed}}         			
+                                <input class="toggle" type="checkbox" checked="checked" value="{{this.time}}" data-id="{{this.smr_id}}" status="{{this.completed}}"> 
+                            	<s><label style="color: #a9a9a9;  text-decoration: line-through;">{{this.task}}</label></s>
+                            {{else}}
+                            	<input class="toggle" type="checkbox" value="{{this.time}}" data-id="{{this.smr_id}}" status="{{this.completed}}">
+                            	<label>{{this.task}}</label>                 
+                            {{/if}}                                
+                                <button class="destroy" data-id="{{this.smr_id}}"></button>
+                       </div>
+	                      <!-- <input class="edit" value="{{todo.title}}"> -->
+	                 </li>
+	                 {{/each}}
+	        </ul>
+       </section>
+   
+       <footer id="footer" class="data-cloak">
+         
+         {{#if this.unCompleted}}
+        	<span id="todo-count"><strong>{{unCompleted}}</strong>&nbsp; items left</span>
+         {{else}}
+         	<span id="todo-count"><strong>{{unCompleted}}</strong>&nbsp; item left</span>
+         {{/if}}
+         
+        <ul id="filters">
+          <li tag="all"> 
+            All
+          </li>
+          <li tag="active"> 
+            Active
+          </li>
+          <li tag="completed"> 
+            Completed
+          </li>
+          
+         </ul>
+        	<button id="clear-completed">Clear completed  &nbsp; ({{commpleted}})</button>
+       </footer>
+     </div>
+     
+     <style type="text/css">
+		{{#if isChecked}}
+			#clear-completed {
+				display:block;
+			}
+		{{else}}
+			#clear-completed {
+				display:none;
+			}
+		{{/if}}
+	</style>
+ 
+     <div id="info">
+           
+     	<p>Created by EvangelistTeam</p>
+              
+     </div>
+
+</block>

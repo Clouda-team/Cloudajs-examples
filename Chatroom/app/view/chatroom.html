@@ -1,0 +1,28 @@
+
+
+<div id="chatroom">
+	
+	<div id="toolbar">
+		<span>Clouda聊天室</span>						
+	</div>
+		
+	<block tpl-id="chatroom_container">
+		<div id="messages">
+			
+			{{#each data}}
+				<div class="username">{{this.username}}<span class="time">{{$Library.getChatTime.getTime(this.time)}}</span></div>
+				<div class="content">
+					{{this.message}}
+				</div>	
+			{{/each}}
+			
+		</div>
+	</block>
+		
+	<footer>
+		<input id="inputName" placeholder="Name" />
+		<input id="inputMessage" placeholder="Say something here!" />
+		<button id="send">发送</button>
+	</footer>
+	
+</div>

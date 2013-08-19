@@ -1,0 +1,10 @@
+CACHE MANIFEST 
+#version:1376575513147
+CACHE:
+sumeru.css
+sumeru.js
+app.js
+view/chatroom.html
+view/itworks.html
+NETWORK:
+*
