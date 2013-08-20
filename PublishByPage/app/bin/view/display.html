@@ -1,0 +1,34 @@
+
+<label for="sdname">用户名</label>
+<input id="sdname" name="sdname" />
+
+<br/>
+
+<label for="sdage">年龄</label>
+<input id="sdage" name="sdage" />
+
+
+<button id="sdsave">save</button>
+
+
+
+<block tpl-id="sduserlist">
+    <table>
+        <thead>
+        <tr><th>用户名</th><th>年龄</th></tr>
+        </thead>
+        <tbody>
+            {{#foreach data}}
+                <tr>
+                    <td>{{value.name}}</td>
+                    <td>{{value.age}}</td>
+                </tr>
+            {{/foreach}}
+        </tbody>
+    </table>
+
+    <button id="pre">上一页</button>
+
+    <button id="next">下一页</button>
+</block>
+
