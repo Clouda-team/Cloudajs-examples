@@ -1,0 +1,4 @@
+sumeru.packages(
+    'news.js'
+)
+
