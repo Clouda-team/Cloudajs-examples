@@ -58,4 +58,8 @@ Demo介绍：演示如何使用Clouda抓取第三方数据
 
 * 由于抓取的源文件编码格式是gb2312，所以使用第三发模块iconv-lite来转码。使用本demo前，将SpiderNews内的app和node_modules文件夹覆盖新建的工程内同名文件夹即可。
 
+## PublishByPage
 
+Demo介绍：演示在Clouda中如何使用publishByPage和subscribeByPage进行分页显示，并使用publishPlain获取数据库数据的大小
+
+在线演示：<http://cloudapublishbypage.duapp.com/>
