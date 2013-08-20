@@ -45,12 +45,7 @@ App.publishByPage = sumeru.controller.create(function(env, session){
     //获取数据库的大小
     var getModelCount = function(){
         env.subscribe('pub-modelCount', function(count){
-            session.set('modelCount',count/session.get('pagesize'));
-
-            console.log("modelCount1:"+session.get('modelCount'));
-            session.bind('sduserlist', {
-                count : count
-            });
+            session.set('modelCount',count/session.get('pagesize'));  
         });
     }
 
@@ -65,25 +60,19 @@ App.publishByPage = sumeru.controller.create(function(env, session){
 
     env.onready = function(doc){
         session.event("sduserlist",function(){
-
             var event = "click";
 
             if(!!('ontouchstart' in window)){
                 event = 'touchstart';
             }
 
-            if(session.get('pageNum')==1 || session.get('pageNum')<session.get('modelCount')){
+            if(session.get('pageNum')==1 || session.get('pageNum')<1){
                 document.getElementById('pre').disabled = true;
             }else{
                 document.getElementById('pre').disabled = false;
             }
 
-            console.log('test:'+session.get('pageNum')+'---'+session.get('modelCount'));
-
             if(session.get('pageNum')==session.get('modelCount') || session.get('pageNum')>session.get('modelCount')){
-
-                console.log(session.get('pageNum')+'---'+session.get('modelCount'));
-
                 document.getElementById('next').disabled = true;
             }else{
                 document.getElementById('next').disabled = false;
