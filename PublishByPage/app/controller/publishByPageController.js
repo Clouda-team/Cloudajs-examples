@@ -62,7 +62,6 @@ App.publishByPage = sumeru.controller.create(function(env, session){
         session.event("sduserlist",function(){
             var event = "click";
 
-
             var pageNum = Number(session.get('pageNum'));
             var modelCount = Number(session.get('modelCount'));
 
