@@ -62,17 +62,17 @@ App.publishByPage = sumeru.controller.create(function(env, session){
         session.event("sduserlist",function(){
             var event = "click";
 
-            if(!!('ontouchstart' in window)){
-                event = 'touchstart';
-            }
 
-            if(session.get('pageNum')==1 || session.get('pageNum')<1){
+            var pageNum = Number(session.get('pageNum'));
+            var modelCount = Number(session.get('modelCount'));
+
+            if(pageNum == 1 || pageNum < 1){
                 document.getElementById('pre').disabled = true;
             }else{
                 document.getElementById('pre').disabled = false;
             }
-
-            if(session.get('pageNum')==session.get('modelCount') || session.get('pageNum')>session.get('modelCount')){
+    
+            if(pageNum == modelCount || pageNum > modelCount){ 
                 document.getElementById('next').disabled = true;
             }else{
                 document.getElementById('next').disabled = false;
