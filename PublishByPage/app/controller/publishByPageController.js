@@ -78,7 +78,7 @@ App.publishByPage = sumeru.controller.create(function(env, session){
                 document.getElementById('next').disabled = false;
             }
 
-            //下一页
+            //上一页
             document.getElementById('pre').addEventListener(event, function(){
                 var pageNum = session.get('pageNum');
                 pageNum--;
@@ -87,7 +87,7 @@ App.publishByPage = sumeru.controller.create(function(env, session){
                 session.commit();
             });
 
-            //上一页
+            //下一页
             document.getElementById('next').addEventListener(event, function(){
                 var pageNum = session.get('pageNum');
                 pageNum++;
