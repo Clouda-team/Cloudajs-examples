@@ -1,0 +1,26 @@
+<block tpl-id="chatChannel">
+
+	<div id="chatChannelMain">
+		<div id="toolbar">
+			<button id="back">返回</button>
+			<span>聊天频道</span>
+			<button id="create">创建</button>						
+		</div>
+		
+		<div id="channel">
+			<ul>
+			{{#each data}}
+				<li>
+					<div id="channelName">
+						{{this.channelname}}					
+						<button id="join" channelName={{this.channelname}}>进入</button>							
+					</div>	
+					<div class="createTime">{{$Library.getChatTime.getTime(this.time)}}</div>		
+				</li>
+				
+			{{/each}}
+			
+			</ul>
+		</div>
+	</div>
+</block>

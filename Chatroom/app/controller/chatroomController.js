@@ -36,8 +36,11 @@ App.chatroom = sumeru.controller.create(function(env, session){
 	};
 	
 	//onready is respond for event binding and data manipulate
-	env.onready = function(){
-      	session.event('chatroom_container', function(){ 			
+	env.onready = function(doc){
+        console.log("##",doc);
+        var tt = $("#ttt");//document.getElementById("ttt");
+        tt.text("lalaa");
+      	session.event('chatroom_container', function(){
 			document.getElementById("messages").style.height = document.body.clientHeight - 80 + "px";
 			document.getElementById('messages').scrollTop = document.getElementById('messages').scrollHeight;
 			                                                

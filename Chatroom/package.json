@@ -1,0 +1,51 @@
+{
+  "name": "sumeru",
+  "version": "0.8.12",
+  "description": "A Realtime Javascript RIA Framework For Mobile WebApp",
+  "main": "app.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tongyao/sumeru.git"
+  },
+  "keywords": [
+    "javascript",
+    "nodejs",
+    "webapp"
+  ],
+  "dependencies": {
+    "mkdirp": "0.3.5",
+    "mongodb": "1.3.18",
+    "shelljs": "0.1.4",
+    "sockjs": "0.3.7",
+    "uglify-js": "2.3.6",
+    "redis": "0.8.4",
+    "clean-css": "1.0.12"
+  },
+  "devDependencies": {
+    "mocha": "1.8.1",
+    "chai": "1.7.2",
+    "coveralls": "2.1.0",
+    "mocha-lcov-reporter": "0.0.1"
+  },
+  "bin": {
+    "sumeru": "./sumeru/npm-tools/sumeru"
+  },
+  "author": {
+    "name": "sumeru team"
+  },
+  "license": "MIT",
+  "readme": "[![Build Status](https://secure.travis-ci.org/brandnewera/sumeru.png)](http://travis-ci.org/brandnewera/sumeru)\n[![Dependency Status](https://gemnasium.com/brandnewera/sumeru.png)](https://gemnasium.com/brandnewera/sumeru)\n[![Coverage Status](https://coveralls.io/repos/brandnewera/sumeru/badge.png)](https://coveralls.io/r/brandnewera/sumeru)\n\n\n##What is Sumeru Framework?\n\n\n\nSumeru Framework, a simple but powerful Web App framework, provides rich functionalities for building de-facto Web Applications based on cloud technology. Sumeru framework offers awesome features such as data-unify, adaptive feedback, realtime network connection etc. Developers beneﬁts from Sumeru Framework in terms of coding efforts, performance and application distribution.\n\n## Live Demo: Manage To-Do Lists Across Multiple Devices\n\n![](docs/images/devices.png)\n\n\n[Click and use multiple devices/browsers simultaneously to tryout the live demo with realtime sync of To-Do Lists](http://sumerutodolist.duapp.com)\n\n\n\n[Click to see a live video ====>](http://v.youku.com/v_show/id_XNTI5NzcxNTcy.html) \n![](docs/images/youkuvideo.png)\n\n\n\n\n##How to install and run sumeru\n\n### Install\n\n\n\tnpm install -g sumeru\n\t\n### Init a sumeru project\n\n\tsumeru init ./myproject\n\t\n### Run sumeru\n\n\tcd myproject\n\t\n\tsumeru start\n\n\n\n##How to update existing installation to the lastest version\n\n### Check current installed version\n\n\tnpm ls -g sumeru\n\nor\n\n\tgrep '\"version\"' /usr/local/lib/node_modules/sumeru/package.json\n\n\n### Check the up-to-date version number\n\n\tnpm view sumeru version\n\n### Update sumeru \n\n\tnpm update -g sumeru\n\t\n### Update existing project to use the lastest version (with auto backup, of course)\n\n\tsumeru update ./myproject\n\t\n\tor\n\t\n\tsudo sumeru update ./myproject\n\n\n\n## Documents\n\n\nStep1: [Getting Started](https://github.com/brandnewera/sumeru/blob/master/docs/step1_getting_started.md)\n\nStep2: [Your First App](https://github.com/brandnewera/sumeru/blob/master/docs/step2_your_first_app.md)\n\nStep3: [Overview](https://github.com/brandnewera/sumeru/blob/master/docs/step3_overview.md)\n\t\nStep4: [API Documentation](https://github.com/brandnewera/sumeru/blob/master/docs/step4_API_Documentation.md)\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/tongyao/sumeru/issues"
+  },
+  "_id": "sumeru@0.8.12",
+  "dist": {
+    "shasum": "4c9146c57053fa445ce465d768c686006e14bf8d"
+  },
+  "_from": "sumeru@0.8.12",
+  "_resolved": "https://registry.npmjs.org/sumeru/-/sumeru-0.8.12.tgz"
+}
