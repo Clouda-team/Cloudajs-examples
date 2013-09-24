@@ -1,0 +1,186 @@
+#listMain{
+    overflow: hidden;
+    position:relative;
+    padding:0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+#toolbar
+{
+    position: absolute;
+    z-index: 2008;
+    top: 0px;
+    margin:0px;
+    width: 100%;
+    color: #fff;
+    height: 45px;
+    line-height: 45px;
+    background-image: url(/assets/res/tool_bar_bg.png);
+    background-repeat: repeat-x;
+    text-align: center;
+    font-size: 15px;
+}
+
+#toolbar span{
+    height: 45px;
+    line-height: 45px;
+    font-size: 18px;
+}
+
+#create{
+    position:relative;
+    z-index:300021;
+    margin-top:8px;
+    width: 36px;
+    height: 30px;
+    float:right;
+    margin-right:5px;
+}
+
+#delete{
+    position:relative;
+    z-index:300021;
+    margin-top:8px;
+    width: 62px;
+    height: 31px;
+    float:right;
+    margin-right:5px;
+}
+
+#back{
+    position:relative;
+    z-index:300021;
+    margin-top:8px;
+    width: 105px;
+    height: 30px;
+    float:left;
+    margin-let:5px;
+}
+
+#cancel{
+    position:relative;
+    z-index:300021;
+    margin-top:8px;
+    width: 62px;
+    height: 31px;
+    float:left;
+    margin-left:5px;
+}
+
+#done{
+    position:relative;
+    z-index:300021;
+    margin-top:8px;
+    width: 52px;
+    height: 31px;
+    float:right;
+    margin-right:5px;
+}
+
+#list,#createForm,#show_detail{
+    position:absolute;
+    top:45px;
+    width: 100%;
+    overflow: auto;
+    bottom: 0px;
+}
+
+#list ul,#createForm ul,#show_detail ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+#list ul li,#createForm ul li,#show_detail ul li{
+    display:list-item;
+    background-color: #fff;
+    border-bottom: 2px #E1E1E1 solid;
+    width: 100%;
+    line-height: 1.4em;
+    font-size: 18px;
+}
+
+#createForm ul li{
+    text-align: center;
+    line-height: 50px;
+}
+
+#show_detail ul li{
+    line-height: 50px;
+    padding-left: 10%;
+
+}
+
+#createForm ul li label{
+    color: blue;
+    font-size: 14px;
+}
+
+#list ul li a{
+    text-decoration: none;
+    color: #000000;
+}
+
+#createForm ul li input{
+    border-radius: 5px;
+    height: 24px;
+    width: 150px;
+    font-size: 18px;
+}
+
+#location_input{
+    margin-left: 12px;
+}
+
+#list ul li img{
+    float:right;
+    width: 24px;
+    margin-top: -18px;
+    margin-right:8px;
+}
+
+#name_label,#location_label,#date_label{
+    color: blue;
+    font-size: 14px;
+}
+
+#location_label{
+    padding-left: 14px;
+}
+
+#date_label{
+    padding-left: 41px;
+}
+
+#name_detail,#location_detail,#date_detail{
+    font-weight:bold;
+    color: #000000;
+}
+
+#location_detail{
+    word-break: break-word;
+    line-height: 1.2;
+    -webkit-transition: color 0.4s;
+    padding-left: 75px;
+    display: block;
+    margin-top: -35px;
+    margin-bottom: 15px;
+}
+
+.name{
+    margin-top:6px;
+    margin-left:10px;
+}
+
+.time{
+    color:#ADACAC;
+    margin-top:3px;
+    margin-left:10px;
+    font-size:10px;
+}
+
+		
