@@ -871,7 +871,7 @@ var runnable = function(fw){
             return me;
         };
         
-        fw.dev("cmai'n'con'toreate new : " + id);
+        fw.dev("create new : " + id);
     };
     
     MainController.prototype = fw.utils.extendFrom(controllerBase,{

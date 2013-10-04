@@ -325,10 +325,7 @@ var http = require("http"),
                             
                             if (filePath.match(/\/\w+\.html$/) ) {//不只根目录才会渲染
                             	if (fw.config.get("site_url")){
-                                    console.log(entireContent);
                                 	entireContent = entireContent.replace(/<base[\s\S]*?\/\s*>/g,"").replace("</head>",'<base href="'+fw.config.get("site_url")+'" /></head>');
-                                    console.log(entireContent);
-
                                 }
                                 if ( fileObj.controller !== null ) {
                                     var domarr = entireContent.split('<body');

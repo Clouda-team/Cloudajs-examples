@@ -81,8 +81,8 @@ module.exports = function(sumeruDir, dstDir) {
 //    compressed_ast.figure_out_scope();
 //    compressed_ast.compute_char_frequency();
 //    compressed_ast.mangle_names(); // get a new AST with mangled names
-//    var final_code = compressed_ast.print_to_string(); // compressed code here
-      var final_code = buildEntireContent;
+    var final_code = buildEntireContent;//compressed_ast.print_to_string(); // compressed code here
+
 
 
     // var final_code = UglifyJS.minify(orig_code, {

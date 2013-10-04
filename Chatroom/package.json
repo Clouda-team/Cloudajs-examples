@@ -1,6 +1,6 @@
 {
   "name": "sumeru",
-  "version": "0.8.12",
+  "version": "0.8.14",
   "description": "A Realtime Javascript RIA Framework For Mobile WebApp",
   "main": "app.js",
   "scripts": {
@@ -42,10 +42,10 @@
   "bugs": {
     "url": "https://github.com/tongyao/sumeru/issues"
   },
-  "_id": "sumeru@0.8.12",
+  "_id": "sumeru@0.8.14",
   "dist": {
-    "shasum": "4c9146c57053fa445ce465d768c686006e14bf8d"
+    "shasum": "917a040a9b8674bd722d18f3df1cf24a6d9b3b32"
   },
-  "_from": "sumeru@0.8.12",
-  "_resolved": "https://registry.npmjs.org/sumeru/-/sumeru-0.8.12.tgz"
+  "_from": "sumeru@0.8.14",
+  "_resolved": "https://registry.npmjs.org/sumeru/-/sumeru-0.8.14.tgz"
 }

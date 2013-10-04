@@ -5346,7 +5346,7 @@ if(typeof module !='undefined' && module.exports){
             return me;
         };
         
-        fw.dev("cmai'n'con'toreate new : " + id);
+        fw.dev("create new : " + id);
     };
     
     MainController.prototype = fw.utils.extendFrom(controllerBase,{
@@ -9516,9 +9516,9 @@ if(typeof module !='undefined' && module.exports){
 									});
 	fw.validation.addrule("required" , {
 										"runat":"both",
-										"func":function(value){
-											var v = v+""||"",
-												len = v.length;
+										"func":function(v){
+											var v = typeof v != "undefined"?v+"":"";
+											var len = v.length;
 											return len>0;
 										},
 										"msg":"$1为必填项。"
