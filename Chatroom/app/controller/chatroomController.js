@@ -17,8 +17,16 @@ sumeru.router.add(
 sumeru.router.setDefault('App.chatroom');
 
 App.chatroom = sumeru.controller.create(function(env, session){	
-	var getMsgs = function(){ 				
-		session.chatMessages = env.subscribe('pub-chatRoom', function(msgCollection){	
+	var getMsgs = function(){
+        console.log("QQQQQ",Library.getChatTime.getTime());
+        console.log("PPPPP",Library.getChatTime.getTime2());
+
+		session.chatMessages = env.subscribe('pub-chatRoom', function(msgCollection){
+
+            debugger;
+            var bb = session.get('a');
+            console.log("$$$$",bb);
+
           	session.bind('chatroom_container', {
               	data    :   msgCollection.find(),
           	});              				

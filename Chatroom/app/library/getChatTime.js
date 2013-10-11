@@ -15,11 +15,15 @@ Library.getChatTime = sumeru.Library.create(function(exports){
 		}
 						
 		if(chatTime.getYear() == currentTime.getYear() && chatTime.getMonth() == currentTime.getMonth() && chatTime.getDate() == currentTime.getDate()){			
-			return chatTime.getHours()+":"+getMinutes;
+			return 321+ chatTime.getHours()+":"+getMinutes;
 		}else{			
-			return (chatTime.getMonth()+1)+"-"+chatTime.getDate()+"  "+chatTime.getHours()+":"+getMinutes;
+			return 1231231+(chatTime.getMonth()+1)+"-"+chatTime.getDate()+"  "+chatTime.getHours()+":"+getMinutes;
 		}		
 	};
-	
-	return exports;
+
+    exports.getTime2 = function() {
+        return "uuuuuuuu13213";
+    }
+
+    return exports;
 });

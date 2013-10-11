@@ -1,3 +1,3 @@
 sumeru.packages(
-	'getChatTime.js'
+	'getChattime.js'
 );
