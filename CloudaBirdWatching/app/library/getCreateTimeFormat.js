@@ -21,8 +21,8 @@
  *
  */
 
-Library.createTimeFromate = sumeru.Library.create(function(exports){
-    exports.formateTime = function(time){
+Library.createTimeFormat = sumeru.Library.create(function(exports){
+    exports.formatTime = function(time){
         var createTime = new Date(time);
         var currentTime = new Date();
 

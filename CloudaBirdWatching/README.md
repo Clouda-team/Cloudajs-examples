@@ -1,5 +1,5 @@
 ## About this demo
-This demo is inspired by the iOS tutorial artical "Your Second iOS App: Storyboard", demonstrating the basic techniques for developing with Clouda Framework. This web app does everything as the iOS app can achieve, (actually a little bit more than the iOS version), as well as the favorable real-time sync features broughted by Clouda Framework. This is targeted to beginners who is learning Clouda, and it is expected to instruct about these techniques:
+This demo is inspired by the iOS tutorial artical "Your Second iOS App: Storyboard", demonstrating the basic techniques for developing with Clouda Framework. This web app does everything as the iOS app can achieve, (actually a little bit more than the iOS version), as well as the favorable real-time sync features brought by Clouda Framework. This is targeted to beginners who is learning Clouda, and it is expected to instruct about these techniques:
 
 1. Display a Clouda Web App screen.
 2. Define data model, and associate the data with UI layout elements.
