@@ -1,4 +1,5 @@
 sumeru.packages(
-    'birdSightingModel.js'
+    'birdSightingModel.js',
+    'validationRules.js'
 )
 

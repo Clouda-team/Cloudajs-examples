@@ -48,11 +48,11 @@ App.createSighting = sumeru.controller.create(function(env,session) {
 
     // onready: add UI interactions
     env.onready = function() {
-        var onValidationTag = true;
+        var onValidationTag;
         session.sighting.onValidation = function(ispass, runat, validationResult){
             // roll back data when not passed
+            onValidationTag = ispass;
             if(!ispass){
-                onValidationTag = false;
                 this.rollback();
             }
         }
