@@ -48,14 +48,6 @@ App.createSighting = sumeru.controller.create(function(env,session) {
 
     // onready: add UI interactions
     env.onready = function() {
-        var onValidationTag;
-        session.sighting.onValidation = function(ispass, runat, validationResult){
-            // roll back data when not passed
-            onValidationTag = ispass;
-            if(!ispass){
-                this.rollback();
-            }
-        }
 
         //cancel touch
         Library.touch.on('#cancel', 'touchstart', function() {
@@ -73,13 +65,14 @@ App.createSighting = sumeru.controller.create(function(env,session) {
 
         });
 
+        var nameInput = document.getElementById('name_input');
+        var locationInput = document.getElementById('location_input');
+
         Library.touch.on('#done', 'touchend', function(){
             document.getElementById('done').src = "../assets/res/done.png";
-            var nameInput = document.getElementById('name_input'),
-                nameInputVal = nameInput.value.trim();
 
-            var locationInput = document.getElementById('location_input'),
-                locationInputVal = locationInput.value.trim();
+            nameInputVal = nameInput.value.trim();
+            locationInputVal = locationInput.value.trim();
 
             if (nameInputVal === '' || locationInputVal === '') {
                 alert("Input value is empty!");
@@ -89,16 +82,19 @@ App.createSighting = sumeru.controller.create(function(env,session) {
             // save the data model, and commit it to server
             session.sighting.add({name:nameInputVal, location:locationInputVal});
             session.sighting.save();
-            if (onValidationTag) {
-                //clear input Message
+        });
+
+        session.sighting.onValidation = function(ispass){
+            // roll back data when not passed
+            if(ispass){
                 locationInput.value = "";
                 nameInput.value = "";
                 env.redirect("/sightingList");
-            }
-            else{
+            } else {
+                this.rollback();
                 alert("Hmm... sorry that's not look like a Bird Name to me. \nPlease try another.");
             }
-        });
+        }
     };
 
 });

@@ -35,6 +35,5 @@ sumeru.validation.addrule("birdName" , {
             "Titmouse","Towhee","Turkey","Turnstone","Vireo","Vulture","Warbler","Wigeon","Woodpecker","Wren","Yellowlegs"];
 
         return -1 != birdNameArray.indexOf(name);
-    },
-    "msg":"$1 is not exist!"
+    }
 });
