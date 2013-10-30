@@ -1,0 +1,22 @@
+<div id="listMain">
+    <div id="toolbar">
+        <span>Bird Sightings</span>
+        <img id="create" src="/assets/res/add.png"/>
+    </div>
+    <block tpl-id="sighting_list">
+        <div id="list">
+            <ul>
+                {{#each data}}
+                    <li data-id={{this.date}}>
+                        <a href="javascript:;" >
+                            <div class="name"> {{this.name}} </div>
+                            <img src="/assets/res/right_arrow.png"/>
+                            <div class="time">{{$Library.createTimeFormat.formatTime(this.date)}}</div>
+                        </a>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+    </block>
+</div>
+

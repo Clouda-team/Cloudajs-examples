@@ -1,0 +1,32 @@
+<div id="detail_container">
+    <div id="toolbar">
+        <img id="back" src="/assets/res/BS.png"/>
+        <img id="delete" src="/assets/res/delete.png"/>
+    </div>
+    <block tpl-id="sighting_details">
+        <div id="show_detail">
+            <ul>
+                {{#each data}}
+                    <li>
+                            <label id="name_label">Bird Name</label>
+                            <label id="name_detail">{{this.name}}</label>
+                    </li>
+                    <li>
+                        <div style="display: block">
+                            <label id="location_label">Location</label>
+                            <label id="location_detail">{{this.location}}</label>
+                        </div>
+                    </li>
+                    <li>
+                            <label id="date_label">Date</label>
+                            <!-- two approaches as below to show formatted date time -->
+                            <!--
+                            <label id="date_detail">{{$Library.createTimeFormat.formatTime(this.date)}}</label>
+                            -->
+                            <label id="date_detail">{{dateFormatTime this.date}}</label>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+    </block>
+</div>
