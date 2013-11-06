@@ -71,8 +71,8 @@ App.createSighting = sumeru.controller.create(function(env,session) {
         Library.touch.on('#done', 'touchend', function(){
             document.getElementById('done').src = "../assets/res/done.png";
 
-            nameInputVal = nameInput.value.trim();
-            locationInputVal = locationInput.value.trim();
+            var nameInputVal = nameInput.value.trim();
+            var locationInputVal = locationInput.value.trim();
 
             if (nameInputVal === '' || locationInputVal === '') {
                 alert("Input value is empty!");
