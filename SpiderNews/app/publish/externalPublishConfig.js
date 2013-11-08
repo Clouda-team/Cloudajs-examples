@@ -1,37 +1,35 @@
-/**
- * Created with JetBrains WebStorm.
- * User: yunlong
- * Date: 13-8-17
- * Time: 下午5:48
- * To change this template use File | Settings | File Templates.
- */
+function runnable(){
+    var iconv = require('iconv-lite');
+    var config = {};
 
-var iconv = require('iconv-lite');
-var extpubConfig = {}
+    config['pubnews'] = {
 
-extpubConfig['pubnews'] = {
+        fetchUrl : function(){
+              return 'http://news.baidu.com/';
+        },
+        
+        resolve : function(originData){
+            decodeData = iconv.decode(originData,'gb2312');
 
-    geturl : function(params){
-        return 'http://news.baidu.com/';
-    },
+            var topnewsRegex = /<ul class="ulist "  >([\W\w]*?)<\/div>/;
+            var topnews = decodeData.match(topnewsRegex)[1];
 
-    resolve : function(originData){
-        decodeData = iconv.decode(originData,'gb2312')
+            var resolved = {
+                topnews: topnews
+            }
 
-        var topnewsRegex = /<ul class="ulist "  >([\W\w]*?)<\/div>/;
-        var topnews = decodeData.match(topnewsRegex)[1];
+            return resolved;
+        },
 
-        var resolved = {
-            topnews: topnews
-        }
+        fetchInterval : 15 * 1000,
+        //如果需要转码，buffer设为true， 默认为false
+        buffer : true
+    }
 
-        return resolved;
-    },
-
-    fetchInterval : 6 * 1000,
-
-    buffer : true
-
+    return {
+        type : 'external',
+        config : config
+    }
 }
 
-module.exports = extpubConfig;
+module.exports = runnable;
