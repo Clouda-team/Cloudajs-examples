@@ -51,18 +51,20 @@ App.sightingList = sumeru.controller.create(function(env,session) {
     // onready: add UI interactions, such as creating DOM event listeners
     env.onready = function(doc) {
         session.event('sighting_list',function() {
-            var links = doc.querySelectorAll("li");
-            for (var i= 0, len=links.length; i<len; i++ ) {
-                links[i].addEventListener("touchstart",function(e) {
-                    this.style.backgroundColor = "#83bff1";
+            document.getElementById('bird_list').addEventListener("click", function(e){
+                var e = e || window.event;
+                for(target = e.target || e.srcElement; target.tagName.toLowerCase() != 'li';){
+                    target =  target.parentElement;
+                }
 
-                });
-                links[i].addEventListener("touchend",function(e) {
-                    var tag = this.getAttribute('data-id');
-                    this.style.backgroundColor = "#ffffff";
-                    env.redirect("/sightingDetail",{id:tag});
-                });
-            }
+                if(target.tagName.toLowerCase() == 'li' && target.hasAttribute('data-id')){
+                    var tag = target.getAttribute('data-id');
+                    target.style.backgroundColor = "#83bff1";
+                    setTimeout("target.style.backgroundColor = '#ffffff';",1000);
+                    env.redirect('/sightingDetail',{id:tag});
+                }
+            });
+
         })
 
         //create touch
