@@ -10,7 +10,7 @@ App.createchannel = sumeru.controller.create(function(env,session){
 		session.messages = env.subscribe('pub-chatchannel', function(msgCollection){
 			msgCollection.addSorters("time","DESC");
 			//manipulate synced collection and bind it to serveral view blocks.
-          	session.bind('craeteChannel', {
+          	session.bind('createChannel', {
               	data    :   msgCollection.find(),
           	});              
 	    });
