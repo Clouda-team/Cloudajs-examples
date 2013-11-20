@@ -1,0 +1,62 @@
+<div id="contain">
+    <div id="top">
+        <h2 class="partTitle"> 获取和修改第三方数据Demo</h2>
+        <block tpl-id="descBlock">
+
+            <div class="desc">
+                描述：<br>
+                数据源的url为{{serverUrl}}。<br>
+                <span class="desc emphasize">左边部分</span>：发get（也可以改成post）请求从数据源获取数据，同时提供了向该服务器发送增，删和改数据的post请求的方法;<br>
+                <span class="desc emphasize">右边上半部分</span>：使用clouda从数据源跨域取数据;<br>
+                <span class="desc emphasize">右边下半部分</span>：仅仅是个iframe，src为数据源<br>
+                <span class="desc notice">notice: 由于第三方数据server部署在bae上，且bae做了数据库读写频率限制，所以有时会取不到数据，一般是等十几分钟即可.</span>
+            </div>
+        </block>
+    </div>
+
+    <div id="left">
+        <h3 class="partTitle"> 使用clouda处理第三方数据 </h3>
+        <block tpl-id="extBlock">
+            <table class="listContent" rules="rows" frame="hsides">
+                <tr>
+                    <th class="contentName">Name</th>
+                    <th class="contentAge">Age</th>
+                    <th class="contentModifyAge">New Age</th>
+                    <th class="contentDel">Delete</th>
+                </tr>
+                {{#each data}}
+                <tr data-smrid="{{this.smr_id}}">
+                    <td >{{this.name}}</td>
+                    <td>{{this.age}}</td>
+                    <td>
+                        <input type="text" id="newAge" value="0" />
+                        <button class="mod" data-smrid="{{this.smr_id}}">Mod</button>
+                    </td>
+                    <td> <button class="del" data-smrid="{{this.smr_id}}">Del</button> </td>
+                </tr>
+                {{else}}
+                <tr>
+                    <td>no data</td>
+                </tr>
+                {{/each}}
+            </table>
+        </block>
+
+        <div>
+            <h4 class="subTitle">添加一条数据 </h4>
+            Name:<input type="text" id="studentName"/>
+            Age :<input type="text" id="studentAge" />
+            <button id="addStudent">Add</button>
+        </div>
+    </div>
+
+    <div id="right">
+        <h3 class="partTitle"> 使用clouda跨域取数据 </h3>
+        <span id="crossDomainGet" class="souceData"></span>
+        <h3 class="partTitle"> 直接访问第三方数据server </h3>
+        <block tpl-id="sourceFrame">
+            <iframe id="sourceFrame" src={{serverUrl}} frameborder="0"></iframe>
+        </block>
+    </div>
+
+</div>
