@@ -31,7 +31,7 @@ App.createchannel = sumeru.controller.create(function(env,session){
             'enter' : 13
         };
         
-		session.event('craeteChannel', function(){					
+		session.event('createChannel', function(){					
 			session.eventMap('#inputChannelName', {     			
      				//enter on pcs, return on mobile
 				'keydown' : function(e){
