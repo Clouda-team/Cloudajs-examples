@@ -1,0 +1,56 @@
+#register_container,#auth_container{
+    margin-top: 50px;
+	width: 100%;
+	text-align: center;
+}
+
+label{
+	font-size: 100%;
+	font-weight: bold;
+}
+
+input{
+    margin-top: 15px;
+}
+
+
+#register_username,#register_password,#register_age,#username,#password,#age{
+    width: 30%;
+    height: 28px;
+    /*margin-top: 4px;*/
+    border-radius:10px;
+    background: #fff;
+    font-size: 14px;
+}
+
+
+button{
+    width: 100px;
+    height: 42px;
+    line-height: 42px;
+    margin-top: 15px;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    border-radius: 3px;
+    border: 1px solid #4688D6;
+    background-color: #4C93E7;
+}
+
+#popup{
+    position:absolute; 
+    top: 50%;
+    left: 50%;
+    z-index:2013; 
+    display:none;
+    width: 128px;
+    height: 128px;
+    margin-top: -64px;
+    margin-left: -64px;
+    background-color:#eeeeee;
+}
+
+#show_userinfo{
+    margin-top: 15px;
+    font-size: 120%;
+}

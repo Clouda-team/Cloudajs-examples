@@ -1,0 +1,11 @@
+CACHE MANIFEST 
+#version:1387270346553
+CACHE:
+sumeru.css
+sumeru.js
+app.js
+view/cloudaAuth.html
+view/itworks.html
+view/register.html
+NETWORK:
+*

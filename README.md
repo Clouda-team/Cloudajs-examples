@@ -77,3 +77,11 @@ Demo介绍：演示在clouda中如何使用get/post获取和修改数据
 
 * ExternalData/external_server: 一个简单的第三方数据server
 
+
+## UseAuth
+
+Demo介绍：演示如何在Clouda中使用Register和Auth完成注册和登录的功能
+
+
+
+
