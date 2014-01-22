@@ -1,0 +1,71 @@
+<div id="location_container">
+    <div id="topBar">
+        <span id="top_setting">设置</span>
+        <span class="app_name">聚点</span>
+        <span id="invitation">邀请</span>         
+    </div>
+    <div id="map1" class="locationMap"></div>
+    
+    <!-- 当用户没有输入名字时弹出 -->
+    <div id="inputNameFlow">
+        名字：
+        <input id="username" type="text"/>
+        <button id="setUsernameBtn">确定</button>
+    </div>
+
+    <div id="setting">
+        名字：
+        <input id="usernameInput" type="text"/>
+        <button id="setUsername">修改名字</button>
+        <button id="shakeMobile">摇一摇->催大家快一点</button>
+        <button id="displayLocationData">显示定位数据</button>
+        <button id="settingClose">关闭</button>
+    </div>
+
+    <div id="invitation_flow">
+        <label id="shareLink"></label>
+        <button id="smsMethod">短信邀请</button>   
+        <button id="erweimaMethod">二维码邀请</button>
+        <img id="image" />
+        <button id="shareClose">关闭</button>
+    </div>
+
+    <div id="trackLocationData">
+        <block tpl-id="locationLogBlock">
+            {{#if displayLocData}}
+                <table class="listContent" rules="all" frame="box">
+                    <tr>
+                        <th>GroupId</th>
+                        <th>Name</th>
+                        <th>UserId</th>
+                        <th>location</th>
+                    </tr>
+                    {{#each data}}
+                    <tr>
+                        <td>{{this.groupId}}</td>
+                        <td>{{this.name}}</td>
+                        <td>{{this.userId}}</td>
+                        <td>
+                            <table rules="all">
+                                {{#each this.coordinate}}
+                                    <tr>
+                                        <td>{{this.lat}}</td>
+                                        <td>{{this.lng}}</td>
+                                        {{#if this.time}}
+                                            <td>{{this.time}}</td>
+                                        {{/if}}
+                                    </tr>
+                                {{/each}}
+                            </table>
+                        </td>
+                    </tr>
+                    {{else}}
+                    <tr>
+                        <td>no data</td>
+                    </tr>
+                    {{/each}}
+                </table>
+            {{/if}}
+        </block>
+    </div>
+</div>

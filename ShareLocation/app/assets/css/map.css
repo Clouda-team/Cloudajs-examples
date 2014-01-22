@@ -1,0 +1,194 @@
+
+#home_container,#location_container,#target_container{
+	width: 100%;
+	text-align: center;	
+	overflow: hidden;
+    position:relative;
+    padding:0px;
+    margin: 0px;
+    height: 100%;
+    background-color: #f4f4f4
+}
+
+#topBar{
+	position: absolute;
+    z-index: 2008;
+    top: 0px;
+    margin:0px;
+    width: 100%;
+    height: 44px;
+	border-top: solid 1px #d6d6d6;
+	border-bottom: solid 1px #d6d6d6;
+	-webkit-appearance: none;
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#357ae8),color-stop(50%,#3b85ff),color-stop(100%,#357ae8));
+	background: -webkit-linear-gradient(top,#357ae8 0,#3b85ff 50%,#357ae8 100%);
+	background: -moz-linear-gradient(top,#357ae8 0,#3b85ff 50%,#357ae8 100%);
+	background: -ms-linear-gradient(top,#357ae8 0,#3b85ff 50%,#357ae8 100%);
+	background: -o-linear-gradient(top,#357ae8 0,#3b85ff 50%,#357ae8 100%);
+	background: linear-gradient(to bottom,#357ae8 0,#3b85ff 50%,#357ae8 100%);
+}
+
+
+#topBar span{
+	font-size: 14px;
+	font-weight: normal;
+	text-align: center;
+	color: #fff;
+	line-height: 44px;
+}
+
+#top_setting,#setDestination{ 
+	float:left;
+	margin-left:20px;
+	cursor: pointer;
+}
+
+#invitation,#goOn{
+	float:right;
+	margin-right: 20px;
+	cursor: pointer;
+}
+
+
+#main_option_container{
+	position:absolute;
+	top:50%;
+	margin-top: -160px;
+	width: 100%;
+	overflow: auto;
+	bottom:0px;
+}
+
+#main_option_container button{
+	margin-top: 25px;
+}
+
+
+#map,#map1 {
+	position:absolute;
+	top:44px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	margin:0;
+}
+
+#topBar .app_name{
+	font-size: 19px;
+}
+
+
+label{
+	font-size: 100%;
+	font-weight: bold;
+}
+
+input{
+    margin-top: 15px;
+    margin-bottom: 10px;
+    width: 30%;
+    height: 28px;
+    border-radius:10px;
+    background: #fff;
+    font-size: 14px;
+}
+
+#home_container button{
+	width: 90%;
+    border: solid 1px #2f5bb7;
+	border-radius: 9px;
+	padding: 2px 6px 3px;
+	-webkit-appearance: none;
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#357ae8),color-stop(50%,#3b85ff),color-stop(100%,#357ae8));
+	background: -webkit-linear-gradient(top,#357ae8 0,#3b85ff 50%,#357ae8 100%);
+	background: -moz-linear-gradient(top,#357ae8 0,#3b85ff 50%,#357ae8 100%);
+	background: -ms-linear-gradient(top,#357ae8 0,#3b85ff 50%,#357ae8 100%);
+	background: -o-linear-gradient(top,#357ae8 0,#3b85ff 50%,#357ae8 100%);
+	background: linear-gradient(to bottom,#357ae8 0,#3b85ff 50%,#357ae8 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#357ae8',endColorstr='#357ae8',GradientType=0);
+	background-color: #357ae8;
+	font-size: 16px;
+	line-height: 44px;
+	font-weight: bold;
+	text-align: center;
+	color: #fff;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+
+#selectDestinationMethod,#setting,#invitation_flow{
+	position:absolute; 
+    bottom: 0px;
+    z-index:70130; 
+    display:none;
+    width: 100%;
+    background-color:#eeeeee;
+}
+
+#setting{
+	z-index: 90130;
+}
+
+#r-result{
+	position:absolute; 
+    top: 44px;
+    z-index:80130; 
+    display:none;
+    width: 60%;
+    margin-left: 20%;
+    background-color:#eeeeee;	
+}
+
+#inputNameFlow{
+	position:absolute; 
+	top:50%;
+	left: 50%;
+    z-index:100130; 
+    display:block;
+    width: 256px;
+    height: 128px;
+    margin-top: -100px;
+    margin-left: -128px;
+    background-color:#eeeeee;
+}
+
+#inputNameFlow input{
+	width: 60%;
+}
+
+#selectDestinationMethod button,#setting button,#invitation_flow button,#inputNameFlow button{
+	width: 90%;
+	height: 40px;
+    border: solid 1px #2f5bb7;
+	border-radius: 9px;
+	line-height: 40px;
+	margin-top: 10px;
+	padding: 2px 6px 3px;
+	-webkit-appearance: none;
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#357ae8),color-stop(50%,#3b85ff),color-stop(100%,#357ae8));
+	background: -webkit-linear-gradient(top,#357ae8 0,#3b85ff 50%,#357ae8 100%);
+	background: -moz-linear-gradient(top,#357ae8 0,#3b85ff 50%,#357ae8 100%);
+	background: -ms-linear-gradient(top,#357ae8 0,#3b85ff 50%,#357ae8 100%);
+	background: -o-linear-gradient(top,#357ae8 0,#3b85ff 50%,#357ae8 100%);
+	background: linear-gradient(to bottom,#357ae8 0,#3b85ff 50%,#357ae8 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#357ae8',endColorstr='#357ae8',GradientType=0);
+	background-color: #357ae8;
+	font-size: 16px;
+	line-height: 44px;
+	font-weight: bold;
+	text-align: center;
+	color: #fff;
+	cursor: pointer;
+	box-sizing: border-box;	
+}
+
+#trackLocationData {
+    position:absolute;
+    bottom: 0px;
+    z-index:70130;
+    display:none;
+    width: 100%;
+    background-color:#eeeeee;
+    opacity:0.5;
+}
+
