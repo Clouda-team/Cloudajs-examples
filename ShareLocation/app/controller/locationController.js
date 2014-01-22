@@ -113,6 +113,10 @@ App.location = sumeru.controller.create(function(env, session){
                 $('#invitation_flow').toggle();
                 $('#setting').hide();
                 $('#trackLocationData').hide();
+
+                if(typeof nuwa == "undefined") {
+                    alert("由于不能调用本地设备，请将本页面链接发给好友");
+                }
             }
 
         });
